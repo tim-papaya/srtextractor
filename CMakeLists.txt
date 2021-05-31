@@ -9,8 +9,8 @@ project ("subtranslator")
 
 set(READER_EXE src/main.cpp)
 
-set(SOURCE_LIB src/srtextract.h
-               src/srtextract.cpp)
+set(SOURCE_LIB src/srtextractor.h
+               src/srtextractor.cpp)
 
 add_library(sublib STATIC ${SOURCE_LIB})
 

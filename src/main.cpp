@@ -4,7 +4,7 @@
 #include <cstring>
 #include <vector>
 
-#include "srtextract.h">
+#include "srtextractor.h">
 
 int main(int argc, char* argv[])
 {
