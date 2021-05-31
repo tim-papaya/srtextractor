@@ -63,6 +63,8 @@ class TempReader
 
 public:
     TempReader(const char *fileName) : m_file(fileName) {}
+    TempReader(const std::string &fileName) : m_file(fileName) {}
+
     ~TempReader() { if (m_file) m_file.close(); }
 
     operator bool() { return m_file.is_open() && !m_file.eof(); }

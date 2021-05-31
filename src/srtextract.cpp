@@ -1,4 +1,4 @@
-#include "srtreader.h"
+#include "srtextract.h"
 #include "algorithm"
 
 
@@ -48,7 +48,7 @@ std::ostream& operator<<(std::ostream& stream, const SrtLine &line)
 
 std::ostream& operator<<(std::ostream& stream, const SrtExtLine &line)
 {
-    stream << line.lineStart << line.translated << line.text << line.lineEnd;
+    stream << line.lineStart << line.translated << line.lineEnd;
     return stream;
 }
 TempReader& operator>>(TempReader& reader, SrtExtLine &line)
@@ -66,7 +66,7 @@ TempReader& operator>>(TempReader& reader, SrtExtLine &line)
 void SrtReader::renameFile(std::string &fileName, const char *old, const char *postfix)
 {
    fileName += old;
-   fileName.resize(fileName.size() - 5);
+   fileName.resize(fileName.size() - 4);
    fileName += postfix;
 }
 

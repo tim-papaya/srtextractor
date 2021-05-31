@@ -7,19 +7,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project ("subtranslator")
 
-set(READER_EXE src/reader.cpp)
-set(WRITER_EXE src/writer.cpp)
+set(READER_EXE src/main.cpp)
 
-set(SOURCE_LIB src/srtreader.h
-               src/srtreader.cpp
-               src/srtwriter.h
-               src/srtwriter.cpp)
+set(SOURCE_LIB src/srtextract.h
+               src/srtextract.cpp)
 
 add_library(sublib STATIC ${SOURCE_LIB})
 
-add_executable(readsrc ${READER_EXE})
-target_link_libraries(readsrc sublib)
-
-add_executable(writesrc ${WRITER_EXE})
-target_link_libraries(writesrc sublib)
-
+add_executable(srtextr ${READER_EXE})
+target_link_libraries(srtextr sublib)
