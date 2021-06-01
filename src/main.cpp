@@ -11,8 +11,10 @@ int main(int argc, char* argv[])
     if (argc == 2 && (!strcmp(argv[1], "-h") || !strcmp(argv[1], "--help"))) {
         std::cout << "Usage: srtextr [command] [argument]\n\n"
                   << "Commands:\n"
-                  << "\tread\t" << "read lines from [argument] file to _eng.temp file\n"
-                  << "\twrite\t" << "write from _rus.temp file to _rus.srt file\n\n"
+                  << "\tread\t"  << "read lines from [argument] file\n"
+                                 << "\t\textracts to _eng.temp file\n"
+                  << "\twrite\t" << "read from _rus.temp file\n"
+                                 << "\t\tmake _rus.srt file by using as template [argument] file\n\n"
                   << "Arguments:\n"
                   << "\tFILE_NAME.srt\t" << "path to .srt file\n";
 
